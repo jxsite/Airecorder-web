@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - AIRecorder</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(30, 41, 59, 0.4);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #f59e0b;
+            --accent-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.8;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-primary);
+            font-size: 30px;
+            margin-bottom: 8px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--accent-color);
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #d97706;
+            text-decoration: underline;
+        }
+        .refund-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .refund-box h3 {
+            color: #f87171;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-switch select {
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        /* Hide Google Translate Banner and tooltip overlays */
+        body {
+            top: 0 !important;
+        }
+        .skiptranslate, .goog-te-banner-frame, .goog-te-balloon-frame, #goog-gt-tt {
+            display: none !important;
+        }
+        font {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Top-Right Language Switcher -->
+    <div class="lang-switch">
+        <select id="langSelector" onchange="changeLanguage(this.value)">
+            <option value="en">English (default)</option>
+            <option value="zh-CN">简体中文 (Chinese Simplified)</option>
+            <option value="zh-TW">繁體中文 (Chinese Traditional)</option>
+            <option value="es">Español (Spanish)</option>
+            <option value="fr">Français (French)</option>
+            <option value="de">Deutsch (German)</option>
+            <option value="ja">日本語 (Japanese)</option>
+            <option value="ko">한국어 (Korean)</option>
+            <option value="pt">Português (Portuguese)</option>
+            <option value="ru">Русский (Russian)</option>
+            <option value="it">Italiano (Italian)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="ar">العربية (Arabic)</option>
+            <option value="bn">বাংলা (Bengali)</option>
+            <option value="tr">Türkçe (Turkish)</option>
+            <option value="vi">Tiếng Việt (Vietnamese)</option>
+            <option value="id">Bahasa Indonesia (Indonesian)</option>
+            <option value="th">ไทย (Thai)</option>
+            <option value="nl">Nederlands (Dutch)</option>
+            <option value="pl">Polski (Polish)</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1 class="notranslate" translate="no">Terms of Service</h1>
+        <p class="subtitle">Last Updated: June 5, 2026</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By registering, logging in, or purchasing a subscription to AIRecorder (provided by deppie), you fully acknowledge, understand, and agree to be bound by these Terms of Service. If you do not agree, please do not use the app.</p>
+
+        <h2>2. Usage Rules & Compliance</h2>
+        <p>You represent and warrant that you own or have the legal rights to all audio files and voice recordings processed by the application. You are solely responsible for compliance with local wiretapping, consent, and data protection laws. AIRecorder takes no responsibility for any unauthorized recording activities.</p>
+
+        <h2>3. Subscription Payments & Fees</h2>
+        <p>We offer trial periods and premium plans (AIRecorder Prime). All billing details and payment processing are processed securely through Creem.io. Recurring subscriptions will auto-renew at the end of each billing cycle unless cancelled in your billing portal.</p>
+
+        <div class="refund-box">
+            <h3>⚠️ Strict Non-Refundable Policy</h3>
+            <p>All premium plans represent immediate digital goods and cloud resource delivery. Once your payment is successfully completed, your premium features are instantly activated, and your subscription fees are strictly <strong>NON-REFUNDABLE</strong> and non-cancellable under any circumstances. You voluntarily waive all statutory withdrawal rights.</p>
+        </div>
+
+        <h2>4. Fair Use Policy (FUP)</h2>
+        <p>To maintain high-speed AI responses and prevent key scrubbing, VIP accounts are bound by our Fair Use Policy limits: a maximum of 2 hours of audio processing in any rolling 24-hour period, and 30 hours of audio processing in any rolling 30-day period. Access will be temporarily limited if limits are exceeded.</p>
+
+        <h2>5. Disclaimer of Warranties</h2>
+        <p>The application and AI services are provided "as is" and "as available". We do not guarantee 100% transcription accuracy or uninterrupted cloud service availability. We are not liable for any data loss, processing errors, or service down-times caused by Google Gemini APIs, Redis clusters, or server providers.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any inquiries, technical questions, or billing discrepancies, please reach out to our Customer Support at: <a href="mailto:debbiepoulsonevx99@gmail.com">debbiepoulsonevx99@gmail.com</a>.</p>
+
+        <div class="footer">
+            <p>&copy; 2026 <span class="notranslate" translate="no">AIRecorder</span> App. All rights reserved.</p>
+            <p style="margin-top: 15px;"><a href="index.html">Back to Home</a> | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+
+    <!-- Google Web Translate Elements -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        // Auto-detect browser language and trigger Google Translate
+        (function() {
+            const supportedLangs = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'pt', 'ru', 'it', 'hi', 'ar', 'bn', 'tr', 'vi', 'id', 'th', 'nl', 'pl'];
+            
+            // Check if cookie already exists
+            const cookieExists = document.cookie.split('; ').some(row => row.startsWith('googtrans='));
+            if (!cookieExists) {
+                let userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+                let langCode = userLang.split('-')[0];
+                
+                if (userLang === 'zh-cn' || userLang === 'zh-hans') {
+                    langCode = 'zh-CN';
+                } else if (userLang.startsWith('zh')) {
+                    langCode = 'zh-TW';
+                }
+                
+                if (!supportedLangs.includes(langCode.split('-')[0]) && langCode !== 'zh-CN' && langCode !== 'zh-TW') {
+                    langCode = 'en';
+                }
+                
+                const setTranslateCookie = (code) => {
+                    const targetTrans = '/en/' + code;
+                    document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+                    document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+                };
+
+                if (langCode !== 'en') {
+                    setTranslateCookie(langCode);
+                } else {
+                    // Try to detect by IP address / location as fallback
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 1500); // 1.5s timeout
+                    
+                    fetch('https://freeipapi.com/api/json', { signal: controller.signal })
+                        .then(res => res.json())
+                        .then(data => {
+                            clearTimeout(timeoutId);
+                            const countryCode = data.countryCode;
+                            const countryToLang = {
+                                'CN': 'zh-CN', 'TW': 'zh-TW', 'HK': 'zh-TW',
+                                'ES': 'es', 'MX': 'es', 'AR': 'es', 'CO': 'es', 'PE': 'es', 'VE': 'es', 'CL': 'es',
+                                'FR': 'fr', 'DE': 'de', 'AT': 'de', 'CH': 'de',
+                                'JP': 'ja', 'KR': 'ko', 'PT': 'pt', 'BR': 'pt',
+                                'RU': 'ru', 'BY': 'ru', 'KZ': 'ru', 'IT': 'it',
+                                'IN': 'hi', 'BD': 'bn', 'TR': 'tr', 'VN': 'vi',
+                                'ID': 'id', 'TH': 'th', 'NL': 'nl', 'PL': 'pl'
+                            };
+                            const detectedLang = countryToLang[countryCode];
+                            if (detectedLang && detectedLang !== 'en') {
+                                setTranslateCookie(detectedLang);
+                                window.location.reload();
+                            }
+                        })
+                        .catch(err => {
+                            console.log('Location detection skipped/failed:', err);
+                        });
+                }
+            }
+        })();
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function changeLanguage(lang) {
+            const targetTrans = '/en/' + lang;
+            document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+            document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+            window.location.reload();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const cookieValue = document.cookie.split('; ').find(row => row.startsWith('googtrans='));
+            if (cookieValue) {
+                const lang = cookieValue.split('=')[1].split('/').pop();
+                const selector = document.getElementById('langSelector');
+                if (selector) selector.value = lang;
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
