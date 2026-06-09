@@ -704,8 +704,8 @@
                 AIRecorder
             </a>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
+                <a href="#features" data-translate="nav_features">Features</a>
+                <a href="#pricing" data-translate="nav_pricing">Pricing</a>
                 <select id="langSelector" onchange="changeLanguage(this.value)" style="background: #0f172a; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 6px 12px; border-radius: 8px; font-size: 13px; cursor: pointer; outline: none; margin-right: 8px;">
                     <option value="en">English (default)</option>
                     <option value="zh-CN">简体中文 (Chinese Simplified)</option>
@@ -728,20 +728,20 @@
                     <option value="nl">Nederlands (Dutch)</option>
                     <option value="pl">Polski (Polish)</option>
                 </select>
-                <a href="#pricing" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px;">Get Prime</a>
+                <a href="#pricing" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px;" data-translate="nav_get_prime">Get Prime</a>
             </div>
         </div>
     </nav>
-
+ 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <h1>Think it. Say it.<br><span class="gradient-text notranslate" translate="no">AIRecorder</span> it.</h1>
-                <p>Convert your unstructured voice notes into beautifully-formatted text notes instantly. Powered by state-of-the-art AI speech recognition and text summarization.</p>
+                <h1 data-translate="hero_title">Think it. Say it.<br><span class="gradient-text notranslate" translate="no">AIRecorder</span> it.</h1>
+                <p data-translate="hero_desc">Convert your unstructured voice notes into beautifully-formatted text notes instantly. Powered by state-of-the-art AI speech recognition and text summarization.</p>
                 <div class="hero-actions">
-                    <a href="./AIRecorder.apk" class="btn btn-primary">Download Android APK</a>
-                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                    <a href="./AIRecorder.apk" class="btn btn-primary" data-translate="hero_download">Download Android APK</a>
+                    <a href="#features" class="btn btn-secondary" data-translate="hero_learn_more">Learn More</a>
                 </div>
             </div>
             <div class="hero-mockup">
@@ -764,10 +764,10 @@
                         </div>
                         <div>
                             <div class="screen-card">
-                                <div class="screen-card-title">📝 AI Structured Notes</div>
-                                <div class="screen-card-text">"Automatically clean pauses, format headings, list key bullet points, and draft action items from your voice thoughts."</div>
+                                <div class="screen-card-title" data-translate="mockup_structured_notes">📝 AI Structured Notes</div>
+                                <div class="screen-card-text" data-translate="mockup_text">"Automatically clean pauses, format headings, list key bullet points, and draft action items from your voice thoughts."</div>
                             </div>
-                            <div class="screen-btn"><span class="notranslate" translate="no">AIRecorder</span> Active</div>
+                            <div class="screen-btn" data-translate="mockup_active"><span class="notranslate" translate="no">AIRecorder</span> Active</div>
                         </div>
                     </div>
                 </div>
@@ -779,8 +779,8 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Designed for Your Thoughts</h2>
-                <p>Simple on the outside, incredibly powerful on the inside. Experience the easiest way to record and organize voice notes.</p>
+                <h2 data-translate="features_title">Designed for Your Thoughts</h2>
+                <p data-translate="features_subtitle">Simple on the outside, incredibly powerful on the inside. Experience the easiest way to record and organize voice notes.</p>
             </div>
             <div class="feature-grid">
                 <!-- Card 1 -->
@@ -788,32 +788,32 @@
                     <div class="feature-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
                     </div>
-                    <h3>Whisper Transcription</h3>
-                    <p>Powered by OpenAI Whisper, transcribing your spoken audio in over 50 languages with industry-leading precision and punctuation.</p>
+                    <h3 data-translate="feat_whisper_title">Whisper Transcription</h3>
+                    <p data-translate="feat_whisper_desc">Powered by OpenAI Whisper, transcribing your spoken audio in over 50 languages with industry-leading precision and punctuation.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                     </div>
-                    <h3>Gemini Note Re-Writing</h3>
-                    <p>Instantly transforms messy verbal drafts into clean reports, bullet points, summaries, or specific writing styles like emails or essays.</p>
+                    <h3 data-translate="feat_gemini_title">Gemini Note Re-Writing</h3>
+                    <p data-translate="feat_gemini_desc">Instantly transforms messy verbal drafts into clean reports, bullet points, summaries, or specific writing styles like emails or essays.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                     </div>
-                    <h3>SuperSummaries</h3>
-                    <p>Combine multiple recorded notes together to generate cohesive summaries, long-form articles, or outline-based structural maps.</p>
+                    <h3 data-translate="feat_summary_title">SuperSummaries</h3>
+                    <p data-translate="feat_summary_desc">Combine multiple recorded notes together to generate cohesive summaries, long-form articles, or outline-based structural maps.</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
                     </div>
-                    <h3>Audio & Text Uploads</h3>
-                    <p>Not just for live recordings. Upload pre-recorded audio files or existing text files to analyze and restyle with our AI.</p>
+                    <h3 data-translate="feat_upload_title">Audio & Text Uploads</h3>
+                    <p data-translate="feat_upload_desc">Not just for live recordings. Upload pre-recorded audio files or existing text files to analyze and restyle with our AI.</p>
                 </div>
             </div>
         </div>
@@ -823,24 +823,24 @@
     <section class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>Simple 3-Step Flow</h2>
-                <p>From speech to polished documentation in seconds.</p>
+                <h2 data-translate="steps_title">Simple 3-Step Flow</h2>
+                <p data-translate="steps_subtitle">From speech to polished documentation in seconds.</p>
             </div>
             <div class="steps-grid">
                 <div class="step-item">
                     <div class="step-num">1</div>
-                    <h3>Record or Upload</h3>
-                    <p>Press the record button and speak freely, or upload an audio/text file directly from your device.</p>
+                    <h3 data-translate="step_1_title">Record or Upload</h3>
+                    <p data-translate="step_1_desc">Press the record button and speak freely, or upload an audio/text file directly from your device.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-num">2</div>
-                    <h3>AI Processing</h3>
-                    <p>Our speech-to-text transcribes your audio, and LLMs rewrite the text based on your preferred format.</p>
+                    <h3 data-translate="step_2_title">AI Processing</h3>
+                    <p data-translate="step_2_desc">Our speech-to-text transcribes your audio, and LLMs rewrite the text based on your preferred format.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-num">3</div>
-                    <h3>Save & Export</h3>
-                    <p>Read your beautifully structured note, export it as an image, PDF, or sync it safely to the cloud.</p>
+                    <h3 data-translate="step_3_title">Save & Export</h3>
+                    <p data-translate="step_3_desc">Read your beautifully structured note, export it as an image, PDF, or sync it safely to the cloud.</p>
                 </div>
             </div>
         </div>
@@ -850,119 +850,119 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <h2>Flexible Pricing for Everyone</h2>
-                <p>Start free, upgrade to unlock advanced AI capabilities when you need it.</p>
+                <h2 data-translate="pricing_title">Flexible Pricing for Everyone</h2>
+                <p data-translate="pricing_subtitle">Start free, upgrade to unlock advanced AI capabilities when you need it.</p>
             </div>
             <div class="pricing-grid">
                 <!-- Free Plan -->
                 <div class="price-card">
                     <div class="price-header">
-                        <h3>Free Tier</h3>
+                        <h3 data-translate="plan_free_title">Free Tier</h3>
                         <div class="price-amount">
                             <span class="price-num">$0</span>
-                            <span class="price-period">forever</span>
+                            <span class="price-period" data-translate="plan_free_period">forever</span>
                         </div>
                     </div>
-                    <p class="desc">Perfect for trying out the core recording features.</p>
+                    <p class="desc" data-translate="plan_free_desc">Perfect for trying out the core recording features.</p>
                     <ul class="price-features">
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Up to 10 minutes per recording
+                            <span data-translate="plan_free_feat1">Up to 10 minutes per recording</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            100 minutes free trial quota
+                            <span data-translate="plan_free_feat2">100 minutes free trial quota</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            mp3, m4a, wav format support
+                            <span data-translate="plan_free_feat3">mp3, m4a, wav format support</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            File size limit 30MB
+                            <span data-translate="plan_free_feat4">File size limit 30MB</span>
                         </li>
-                        <li style="color: var(--text-secondary); text-decoration: line-through;">
+                        <li style="color: var(--text-secondary); text-decoration: line-through;" data-translate="plan_free_feat5">
                             Longer recordings (up to 30 mins)
                         </li>
-                        <li style="color: var(--text-secondary); text-decoration: line-through;">
+                        <li style="color: var(--text-secondary); text-decoration: line-through;" data-translate="plan_free_feat6">
                             Audio file uploads (>30MB)
                         </li>
-                        <li style="color: var(--text-secondary); text-decoration: line-through;">
+                        <li style="color: var(--text-secondary); text-decoration: line-through;" data-translate="plan_free_feat7">
                             SuperSummaries (Note Merging)
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-secondary" style="margin-top: auto;">Current Free Account</a>
+                    <a href="#" class="btn btn-secondary" style="margin-top: auto;" data-translate="plan_free_btn">Current Free Account</a>
                 </div>
 
                 <!-- Monthly Plan -->
                 <div class="price-card">
                     <div class="price-header">
-                        <h3>Monthly Prime</h3>
+                        <h3 data-translate="plan_monthly_title">Monthly Prime</h3>
                         <div class="price-amount">
                             <span class="price-num">$10</span>
-                            <span class="price-period">/ month</span>
+                            <span class="price-period" data-translate="plan_monthly_period">/ month</span>
                         </div>
                     </div>
-                    <p class="desc">Unlock all advanced AI power on a flexible month-to-month basis.</p>
+                    <p class="desc" data-translate="plan_monthly_desc">Unlock all advanced AI power on a flexible month-to-month basis.</p>
                     <ul class="price-features">
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Longer recordings</strong> (Up to 30 minutes)
+                            <span data-translate="plan_monthly_feat1"><strong>Longer recordings</strong> (Up to 30 minutes)</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Unlimited</strong> AI processing quota
+                            <span data-translate="plan_monthly_feat2"><strong>Unlimited</strong> AI processing quota</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Upload files</strong> up to 60MB (mp3/m4a/wav)
+                            <span data-translate="plan_monthly_feat3"><strong>Upload files</strong> up to 60MB (mp3/m4a/wav)</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>SuperSummaries</strong> (Combine notes)
+                            <span data-translate="plan_monthly_feat4"><strong>SuperSummaries</strong> (Combine notes)</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Export</strong> structured text as PDF/Images
+                            <span data-translate="plan_monthly_feat5"><strong>Export</strong> structured text as PDF/Images</span>
                         </li>
                     </ul>
-                    <a href="https://www.creem.io/payment/prod_BjSgcN17qz6S0Ki0xy4oO" target="_blank" class="btn btn-secondary" style="margin-top: auto;">Subscribe Monthly ($10/mo)</a>
+                    <a href="https://www.creem.io/payment/prod_BjSgcN17qz6S0Ki0xy4oO" target="_blank" class="btn btn-secondary" style="margin-top: auto;" data-translate="plan_monthly_btn">Subscribe Monthly ($10/mo)</a>
                 </div>
 
                 <!-- Yearly Plan (Prime) -->
                 <div class="price-card popular">
-                    <div class="popular-badge">Save 25%</div>
+                    <div class="popular-badge" data-translate="plan_yearly_badge">Save 25%</div>
                     <div class="price-header">
-                        <h3><span class="notranslate" translate="no">AIRecorder</span> Prime</h3>
+                        <h3 data-translate="plan_yearly_title"><span class="notranslate" translate="no">AIRecorder</span> Prime</h3>
                         <div class="price-amount">
                             <span class="price-num">$7.50</span>
-                            <span class="price-period">/ month</span>
+                            <span class="price-period" data-translate="plan_yearly_period">/ month</span>
                         </div>
                     </div>
-                    <p class="desc">Best value for long-term productivity and study.</p>
+                    <p class="desc" data-translate="plan_yearly_desc">Best value for long-term productivity and study.</p>
                     <ul class="price-features">
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Longer recordings</strong> (Up to 30 minutes)
+                            <span data-translate="plan_yearly_feat1"><strong>Longer recordings</strong> (Up to 30 minutes)</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Unlimited</strong> AI processing quota
+                            <span data-translate="plan_yearly_feat2"><strong>Unlimited</strong> AI processing quota</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Upload files</strong> up to 60MB (mp3/m4a/wav)
+                            <span data-translate="plan_yearly_feat3"><strong>Upload files</strong> up to 60MB (mp3/m4a/wav)</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>SuperSummaries</strong> (Combine notes)
+                            <span data-translate="plan_yearly_feat4"><strong>SuperSummaries</strong> (Combine notes)</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <strong>Export</strong> structured text as PDF/Images
+                            <span data-translate="plan_yearly_feat5"><strong>Export</strong> structured text as PDF/Images</span>
                         </li>
                     </ul>
-                    <a href="https://www.creem.io/payment/prod_1OJXSwV85aN79ppfAvDWlv" target="_blank" class="btn btn-primary" style="margin-top: auto;">Subscribe Yearly ($90/yr)</a>
+                    <a href="https://www.creem.io/payment/prod_1OJXSwV85aN79ppfAvDWlv" target="_blank" class="btn btn-primary" style="margin-top: auto;" data-translate="plan_yearly_btn">Subscribe Yearly ($90/yr)</a>
                 </div>
             </div>
         </div>
@@ -975,110 +975,120 @@
                 <div class="logo-dot"></div>
                 AIRecorder
             </a>
-            <p class="footer-text">Secure billing processing guaranteed by Creem.io. Subscription takes effect instantly upon activation. 100% money-back guarantee for billing discrepancies.</p>
-            <div class="secure-badge" style="margin-bottom: 15px;">
+            <p class="footer-text" data-translate="footer_desc">Secure billing processing guaranteed by Creem.io. Subscription takes effect instantly upon activation. 100% money-back guarantee for billing discrepancies.</p>
+            <div class="secure-badge" style="margin-bottom: 15px;" data-translate="footer_security">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-color);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 🛡️ Secured Payments processed by Creem.io
             </div>
             <div class="footer-links" style="margin-bottom: 15px; display: flex; gap: 20px; justify-content: center; font-size: 14px;">
-                <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
-                <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-secondary)'">Terms of Service</a>
+                <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-secondary)'" data-translate="footer_privacy">Privacy Policy</a>
+                <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-secondary)'" data-translate="footer_terms">Terms of Service</a>
             </div>
             <div class="footer-contact" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary);">
-                Customer Support: <a href="mailto:debbiepoulsonevx99@gmail.com" style="color: var(--accent-color); text-decoration: none;">debbiepoulsonevx99@gmail.com</a>
+                <span data-translate="footer_support">Customer Support:</span> <a href="mailto:debbiepoulsonevx99@gmail.com" style="color: var(--accent-color); text-decoration: none;">debbiepoulsonevx99@gmail.com</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 AIRecorder App. All rights reserved.</p>
+                <p>&copy; 2026 AIRecorder App. <span data-translate="footer_copyright">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
 
     <!-- Google Web Translate Elements -->
     <div id="google_translate_element" style="display:none;"></div>
+    <!-- Include Translation Mappings -->
+    <script type="text/javascript" src="locales.js"></script>
     <script type="text/javascript">
-        // Auto-detect browser language and trigger Google Translate
-        (function() {
-            const supportedLangs = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'pt', 'ru', 'it', 'hi', 'ar', 'bn', 'tr', 'vi', 'id', 'th', 'nl', 'pl'];
+        const supportedLangs = ['en', 'zh-CN', 'zh-TW', 'es', 'fr', 'de', 'ja', 'ko', 'pt', 'ru', 'it', 'hi', 'ar', 'bn', 'tr', 'vi', 'id', 'th', 'nl', 'pl'];
+
+        // Function to apply local translations to elements with data-translate attribute
+        function applyLocalTranslations(lang) {
+            if (typeof locales === 'undefined') return false;
             
-            // Respect explicitly chosen language in localStorage and skip auto-detect
-            const userLangPref = localStorage.getItem('user_language');
-            if (userLangPref) {
-                if (userLangPref === 'en') {
-                    // English is native page language, delete translate cookie to disable translation
-                    const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
-                    if (cookieValue) {
-                        document.cookie = "googtrans=; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-                        document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-                        window.location.reload();
-                    }
-                    return;
+            // Map alias languages
+            let targetLang = lang;
+            if (lang === 'zh') targetLang = 'zh-CN';
+            
+            const dict = locales[targetLang] || locales[targetLang.split('-')[0]];
+            if (!dict) return false;
+
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (dict[key]) {
+                    el.innerHTML = dict[key];
                 }
-                const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
-                const currentLang = cookieValue ? cookieValue.split('=')[1].split('/').pop() : null;
-                if (currentLang !== userLangPref) {
-                    const targetTrans = '/en/' + userLangPref;
-                    document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
-                    document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
-                    window.location.reload();
-                }
-                return;
+            });
+            document.documentElement.lang = targetLang;
+            return true;
+        }
+
+        // Change language handler
+        function changeLanguage(lang) {
+            localStorage.setItem('user_language', lang);
+            
+            // Apply instantly without reload
+            applyLocalTranslations(lang);
+            const selector = document.getElementById('langSelector');
+            if (selector) {
+                selector.value = lang;
             }
 
-            // Check if cookie already exists
-            const cookieExists = document.cookie.split('; ').some(row => row.trim().startsWith('googtrans='));
-            if (!cookieExists) {
-                let userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+            // Sync Google Translate cookie for fallback/other pages
+            if (lang === 'en') {
+                document.cookie = "googtrans=; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+                document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+            } else {
+                let googleTransCode = lang;
+                if (lang === 'zh-CN') googleTransCode = 'zh-CN';
+                else if (lang === 'zh-TW') googleTransCode = 'zh-TW';
+                else googleTransCode = lang.split('-')[0];
+                
+                const targetTrans = '/en/' + googleTransCode;
+                document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+                document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+            }
+        }
+
+        function initLanguage() {
+            let preferredLang = localStorage.getItem('user_language');
+            
+            if (!preferredLang) {
+                // Try cookie
+                const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
+                if (cookieValue) {
+                    preferredLang = cookieValue.split('=')[1].split('/').pop();
+                }
+            }
+            
+            if (!preferredLang) {
+                // Detect from browser navigator language
+                let userLang = (navigator.language || navigator.userLanguage || 'en');
                 let langCode = userLang.split('-')[0];
                 
-                if (userLang === 'zh-cn' || userLang === 'zh-hans') {
-                    langCode = 'zh-CN';
-                } else if (userLang.startsWith('zh')) {
-                    langCode = 'zh-TW';
-                }
-                
-                if (!supportedLangs.includes(langCode.split('-')[0]) && langCode !== 'zh-CN' && langCode !== 'zh-TW') {
-                    langCode = 'en';
-                }
-                
-                const setTranslateCookie = (code) => {
-                    const targetTrans = '/en/' + code;
-                    document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
-                    document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
-                };
-
-                if (langCode !== 'en') {
-                    setTranslateCookie(langCode);
+                if (userLang.toLowerCase() === 'zh-cn' || userLang.toLowerCase() === 'zh-hans') {
+                    preferredLang = 'zh-CN';
+                } else if (userLang.toLowerCase().startsWith('zh')) {
+                    preferredLang = 'zh-TW';
+                } else if (supportedLangs.includes(langCode)) {
+                    preferredLang = langCode;
                 } else {
-                    // Try to detect by IP address / location as fallback
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 1500); // 1.5s timeout
-                    
-                    fetch('https://freeipapi.com/api/json', { signal: controller.signal })
-                        .then(res => res.json())
-                        .then(data => {
-                            clearTimeout(timeoutId);
-                            const countryCode = data.countryCode;
-                            const countryToLang = {
-                                'CN': 'zh-CN', 'TW': 'zh-TW', 'HK': 'zh-TW',
-                                'ES': 'es', 'MX': 'es', 'AR': 'es', 'CO': 'es', 'PE': 'es', 'VE': 'es', 'CL': 'es',
-                                'FR': 'fr', 'DE': 'de', 'AT': 'de', 'CH': 'de',
-                                'JP': 'ja', 'KR': 'ko', 'PT': 'pt', 'BR': 'pt',
-                                'RU': 'ru', 'BY': 'ru', 'KZ': 'ru', 'IT': 'it',
-                                'IN': 'hi', 'BD': 'bn', 'TR': 'tr', 'VN': 'vi',
-                                'ID': 'id', 'TH': 'th', 'NL': 'nl', 'PL': 'pl'
-                            };
-                            const detectedLang = countryToLang[countryCode];
-                            if (detectedLang && detectedLang !== 'en') {
-                                setTranslateCookie(detectedLang);
-                                window.location.reload();
-                            }
-                        })
-                        .catch(err => {
-                            console.log('Location detection skipped/failed:', err);
-                        });
+                    preferredLang = 'en';
                 }
             }
-        })();
+            
+            applyLocalTranslations(preferredLang);
+            const selector = document.getElementById('langSelector');
+            if (selector) {
+                selector.value = preferredLang;
+            }
+        }
+
+        // Initialize immediately when the script runs (DOM above is already parsed)
+        initLanguage();
+
+        // Also run on DOMContentLoaded to catch any dynamically loaded elements
+        window.addEventListener('DOMContentLoaded', () => {
+            initLanguage();
+        });
 
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -1086,36 +1096,6 @@
                 autoDisplay: false
             }, 'google_translate_element');
         }
-
-        function changeLanguage(lang) {
-            localStorage.setItem('user_language', lang);
-            if (lang === 'en') {
-                document.cookie = "googtrans=; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-                document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-                window.location.reload();
-                return;
-            }
-            const targetTrans = '/en/' + lang;
-            document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
-            document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
-            window.location.reload();
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const userLangPref = localStorage.getItem('user_language');
-            const selector = document.getElementById('langSelector');
-            if (selector) {
-                if (userLangPref) {
-                    selector.value = userLangPref;
-                } else {
-                    const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
-                    if (cookieValue) {
-                        const lang = cookieValue.split('=')[1].split('/').pop();
-                        selector.value = lang;
-                    }
-                }
-            }
-        });
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
