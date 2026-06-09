@@ -107,6 +107,27 @@
             cursor: pointer;
             outline: none;
         }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 50px 10px 20px !important;
+            }
+            .container {
+                padding: 20px !important;
+            }
+            .lang-switch {
+                top: 10px !important;
+                right: 10px !important;
+            }
+            .lang-switch select {
+                padding: 4px 8px !important;
+                font-size: 11px !important;
+                max-width: 110px !important;
+            }
+            h1 {
+                font-size: 22px !important;
+            }
+        }
         
         /* Hide Google Translate Banner and tooltip overlays */
         body {
@@ -181,7 +202,7 @@
         <p>You can delete your recorded notes and audio files at any time within the app. If you wish to delete your entire cloud account and associated data permanently, please contact us at our customer support email.</p>
 
         <h2>6. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:surport@leishen.work">surport@leishen.work</a>.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:debbiepoulsonevx99@gmail.com">debbiepoulsonevx99@gmail.com</a>.</p>
 
         <div class="footer">
             <p>&copy; 2026 <span class="notranslate" translate="no">AIRecorder</span> App. All rights reserved.</p>
@@ -196,8 +217,22 @@
         (function() {
             const supportedLangs = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'pt', 'ru', 'it', 'hi', 'ar', 'bn', 'tr', 'vi', 'id', 'th', 'nl', 'pl'];
             
+            // Respect explicitly chosen language in localStorage and skip auto-detect
+            const userLangPref = localStorage.getItem('user_language');
+            if (userLangPref) {
+                const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
+                const currentLang = cookieValue ? cookieValue.split('=')[1].split('/').pop() : null;
+                if (currentLang !== userLangPref) {
+                    const targetTrans = '/en/' + userLangPref;
+                    document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+                    document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+                    window.location.reload();
+                }
+                return;
+            }
+
             // Check if cookie already exists
-            const cookieExists = document.cookie.split('; ').some(row => row.startsWith('googtrans='));
+            const cookieExists = document.cookie.split('; ').some(row => row.trim().startsWith('googtrans='));
             if (!cookieExists) {
                 let userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
                 let langCode = userLang.split('-')[0];
@@ -260,6 +295,7 @@
         }
 
         function changeLanguage(lang) {
+            localStorage.setItem('user_language', lang);
             const targetTrans = '/en/' + lang;
             document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
             document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
@@ -267,11 +303,18 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            const cookieValue = document.cookie.split('; ').find(row => row.startsWith('googtrans='));
-            if (cookieValue) {
-                const lang = cookieValue.split('=')[1].split('/').pop();
-                const selector = document.getElementById('langSelector');
-                if (selector) selector.value = lang;
+            const userLangPref = localStorage.getItem('user_language');
+            const selector = document.getElementById('langSelector');
+            if (selector) {
+                if (userLangPref) {
+                    selector.value = userLangPref;
+                } else {
+                    const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
+                    if (cookieValue) {
+                        const lang = cookieValue.split('=')[1].split('/').pop();
+                        selector.value = lang;
+                    }
+                }
             }
         });
     </script>

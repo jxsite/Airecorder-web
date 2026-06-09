@@ -632,10 +632,7 @@
                 gap: 32px;
             }
             .nav-links {
-                gap: 12px;
-            }
-            .nav-links a:not(.btn) {
-                display: none;
+                gap: 16px;
             }
             .price-card {
                 padding: 32px 24px;
@@ -643,18 +640,6 @@
         }
 
         @media (max-width: 480px) {
-            .nav-links {
-                gap: 8px;
-            }
-            #langSelector {
-                max-width: 90px;
-                padding: 4px 8px;
-                font-size: 12px;
-            }
-            .nav-links .btn {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
             .hero-content h1 {
                 font-size: 28px;
             }
@@ -664,6 +649,35 @@
             .btn {
                 width: 100%;
                 padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 16px 0 !important;
+            }
+            .nav-container {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                padding: 0 12px !important;
+            }
+            .nav-links {
+                gap: 8px !important;
+            }
+            .nav-links a:not(.btn) {
+                display: none !important; /* Hide Features and Pricing to save space */
+            }
+            #langSelector {
+                padding: 4px 8px !important;
+                font-size: 11px !important;
+                margin-right: 4px !important;
+                max-width: 105px !important;
+                border-radius: 6px !important;
+            }
+            .nav-links .btn {
+                padding: 6px 10px !important;
+                font-size: 11px !important;
+                border-radius: 6px !important;
             }
         }
 
@@ -726,7 +740,7 @@
                 <h1>Think it. Say it.<br><span class="gradient-text notranslate" translate="no">AIRecorder</span> it.</h1>
                 <p>Convert your unstructured voice notes into beautifully-formatted text notes instantly. Powered by state-of-the-art AI speech recognition and text summarization.</p>
                 <div class="hero-actions">
-                    <a href="AIRecorder1.1.1.apk" class="btn btn-primary">Download Android APK</a>
+                    <a href="./AIRecorder.apk" class="btn btn-primary">Download Android APK</a>
                     <a href="#features" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
@@ -957,7 +971,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <a href="index.html" class="logo footer-logo notranslate" translate="no">
+            <a href="#" class="logo footer-logo notranslate" translate="no">
                 <div class="logo-dot"></div>
                 AIRecorder
             </a>
@@ -971,7 +985,7 @@
                 <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--text-secondary)'">Terms of Service</a>
             </div>
             <div class="footer-contact" style="margin-bottom: 20px; font-size: 14px; color: var(--text-secondary);">
-                Customer Support: <a href="mailto:surport@leishen.work" style="color: var(--accent-color); text-decoration: none;">surport@leishen.work</a>
+                Customer Support: <a href="mailto:debbiepoulsonevx99@gmail.com" style="color: var(--accent-color); text-decoration: none;">debbiepoulsonevx99@gmail.com</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 AIRecorder App. All rights reserved.</p>
@@ -986,8 +1000,22 @@
         (function() {
             const supportedLangs = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'pt', 'ru', 'it', 'hi', 'ar', 'bn', 'tr', 'vi', 'id', 'th', 'nl', 'pl'];
             
+            // Respect explicitly chosen language in localStorage and skip auto-detect
+            const userLangPref = localStorage.getItem('user_language');
+            if (userLangPref) {
+                const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
+                const currentLang = cookieValue ? cookieValue.split('=')[1].split('/').pop() : null;
+                if (currentLang !== userLangPref) {
+                    const targetTrans = '/en/' + userLangPref;
+                    document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+                    document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
+                    window.location.reload();
+                }
+                return;
+            }
+
             // Check if cookie already exists
-            const cookieExists = document.cookie.split('; ').some(row => row.startsWith('googtrans='));
+            const cookieExists = document.cookie.split('; ').some(row => row.trim().startsWith('googtrans='));
             if (!cookieExists) {
                 let userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
                 let langCode = userLang.split('-')[0];
@@ -1050,6 +1078,7 @@
         }
 
         function changeLanguage(lang) {
+            localStorage.setItem('user_language', lang);
             const targetTrans = '/en/' + lang;
             document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
             document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
@@ -1057,11 +1086,18 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            const cookieValue = document.cookie.split('; ').find(row => row.startsWith('googtrans='));
-            if (cookieValue) {
-                const lang = cookieValue.split('=')[1].split('/').pop();
-                const selector = document.getElementById('langSelector');
-                if (selector) selector.value = lang;
+            const userLangPref = localStorage.getItem('user_language');
+            const selector = document.getElementById('langSelector');
+            if (selector) {
+                if (userLangPref) {
+                    selector.value = userLangPref;
+                } else {
+                    const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
+                    if (cookieValue) {
+                        const lang = cookieValue.split('=')[1].split('/').pop();
+                        selector.value = lang;
+                    }
+                }
             }
         });
     </script>
