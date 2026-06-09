@@ -675,7 +675,7 @@
                 padding: 4px 14px 4px 6px !important;
                 font-size: 11px !important;
                 margin-right: 4px !important;
-                max-width: 55px !important;
+                max-width: 85px !important;
                 border-radius: 6px !important;
                 background-color: #0f172a;
                 border: 1px solid var(--border-color);
@@ -715,8 +715,8 @@
                 gap: 4px !important;
             }
             #langSelectorMobile {
-                max-width: 48px !important;
-                padding: 4px 10px 4px 4px !important;
+                max-width: 75px !important;
+                padding: 4px 12px 4px 4px !important;
                 background-position: right 2px center !important;
                 background-size: 6px !important;
             }
@@ -751,7 +751,7 @@
                 <a href="#features" data-translate="nav_features">Features</a>
                 <a href="#pricing" data-translate="nav_pricing">Pricing</a>
                 <!-- Desktop Language Selector -->
-                <select id="langSelector" onchange="changeLanguage(this.value)" style="background: #0f172a; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 6px 12px; border-radius: 8px; font-size: 13px; cursor: pointer; outline: none; margin-right: 8px;">
+                <select id="langSelector" class="notranslate" translate="no" onchange="changeLanguage(this.value)" style="background: #0f172a; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 6px 12px; border-radius: 8px; font-size: 13px; cursor: pointer; outline: none; margin-right: 8px;">
                     <option value="en">English</option>
                     <option value="zh-CN">简体中文</option>
                     <option value="zh-TW">繁體中文</option>
@@ -774,27 +774,27 @@
                     <option value="pl">Polski</option>
                 </select>
                 <!-- Mobile Language Selector -->
-                <select id="langSelectorMobile" onchange="changeLanguage(this.value)" style="background: #0f172a; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 4px 6px; border-radius: 6px; font-size: 11px; cursor: pointer; outline: none; margin-right: 4px; display: none;">
-                    <option value="en">EN</option>
-                    <option value="zh-CN">简</option>
-                    <option value="zh-TW">繁</option>
-                    <option value="es">ES</option>
-                    <option value="fr">FR</option>
-                    <option value="de">DE</option>
-                    <option value="ja">JA</option>
-                    <option value="ko">KO</option>
-                    <option value="pt">PT</option>
-                    <option value="ru">RU</option>
-                    <option value="it">IT</option>
-                    <option value="hi">HI</option>
-                    <option value="ar">AR</option>
-                    <option value="bn">BN</option>
-                    <option value="tr">TR</option>
-                    <option value="vi">VI</option>
-                    <option value="id">ID</option>
-                    <option value="th">TH</option>
-                    <option value="nl">NL</option>
-                    <option value="pl">PL</option>
+                <select id="langSelectorMobile" class="notranslate" translate="no" onchange="changeLanguage(this.value)" style="background: #0f172a; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 4px 6px; border-radius: 6px; font-size: 11px; cursor: pointer; outline: none; margin-right: 4px; display: none;">
+                    <option value="en">English</option>
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                    <option value="it">Italiano</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ar">العربية</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="th">ไทย</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="pl">Polski</option>
                 </select>
                 <a href="#pricing" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px;" data-translate="nav_get_prime">Get Prime</a>
             </div>
