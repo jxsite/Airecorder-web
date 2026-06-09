@@ -662,22 +662,57 @@
                 padding: 0 12px !important;
             }
             .nav-links {
-                gap: 8px !important;
+                gap: 6px !important;
             }
             .nav-links a:not(.btn) {
                 display: none !important; /* Hide Features and Pricing to save space */
             }
             #langSelector {
-                padding: 4px 8px !important;
+                display: none !important; /* Hide desktop selector on mobile */
+            }
+            #langSelectorMobile {
+                display: inline-block !important; /* Show mobile selector */
+                padding: 4px 6px !important;
                 font-size: 11px !important;
                 margin-right: 4px !important;
-                max-width: 105px !important;
+                max-width: 70px !important;
                 border-radius: 6px !important;
+                background: #0f172a;
+                border: 1px solid var(--border-color);
+                color: var(--text-secondary);
+                cursor: pointer;
+                outline: none;
             }
             .nav-links .btn {
-                padding: 6px 10px !important;
+                padding: 6px 8px !important;
                 font-size: 11px !important;
                 border-radius: 6px !important;
+            }
+            .logo {
+                font-size: 18px !important;
+            }
+            .logo-dot {
+                width: 8px !important;
+                height: 8px !important;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo {
+                font-size: 16px !important;
+            }
+            .nav-container {
+                padding: 0 6px !important;
+            }
+            .nav-links {
+                gap: 4px !important;
+            }
+            #langSelectorMobile {
+                max-width: 60px !important;
+                padding: 4px 4px !important;
+            }
+            .nav-links .btn {
+                padding: 6px 6px !important;
             }
         }
 
@@ -706,27 +741,51 @@
             <div class="nav-links">
                 <a href="#features" data-translate="nav_features">Features</a>
                 <a href="#pricing" data-translate="nav_pricing">Pricing</a>
+                <!-- Desktop Language Selector -->
                 <select id="langSelector" onchange="changeLanguage(this.value)" style="background: #0f172a; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 6px 12px; border-radius: 8px; font-size: 13px; cursor: pointer; outline: none; margin-right: 8px;">
-                    <option value="en">English (default)</option>
-                    <option value="zh-CN">简体中文 (Chinese Simplified)</option>
-                    <option value="zh-TW">繁體中文 (Chinese Traditional)</option>
-                    <option value="es">Español (Spanish)</option>
-                    <option value="fr">Français (French)</option>
-                    <option value="de">Deutsch (German)</option>
-                    <option value="ja">日本語 (Japanese)</option>
-                    <option value="ko">한국어 (Korean)</option>
-                    <option value="pt">Português (Portuguese)</option>
-                    <option value="ru">Русский (Russian)</option>
-                    <option value="it">Italiano (Italian)</option>
-                    <option value="hi">हिन्दी (Hindi)</option>
-                    <option value="ar">العربية (Arabic)</option>
-                    <option value="bn">বাংলা (Bengali)</option>
-                    <option value="tr">Türkçe (Turkish)</option>
-                    <option value="vi">Tiếng Việt (Vietnamese)</option>
-                    <option value="id">Bahasa Indonesia (Indonesian)</option>
-                    <option value="th">ไทย (Thai)</option>
-                    <option value="nl">Nederlands (Dutch)</option>
-                    <option value="pl">Polski (Polish)</option>
+                    <option value="en">English</option>
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                    <option value="it">Italiano</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ar">العربية</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="th">ไทย</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="pl">Polski</option>
+                </select>
+                <!-- Mobile Language Selector -->
+                <select id="langSelectorMobile" onchange="changeLanguage(this.value)" style="background: #0f172a; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 4px 6px; border-radius: 6px; font-size: 11px; cursor: pointer; outline: none; margin-right: 4px; display: none;">
+                    <option value="en">EN</option>
+                    <option value="zh-CN">简</option>
+                    <option value="zh-TW">繁</option>
+                    <option value="es">ES</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                    <option value="ja">JA</option>
+                    <option value="ko">KO</option>
+                    <option value="pt">PT</option>
+                    <option value="ru">RU</option>
+                    <option value="it">IT</option>
+                    <option value="hi">HI</option>
+                    <option value="ar">AR</option>
+                    <option value="bn">BN</option>
+                    <option value="tr">TR</option>
+                    <option value="vi">VI</option>
+                    <option value="id">ID</option>
+                    <option value="th">TH</option>
+                    <option value="nl">NL</option>
+                    <option value="pl">PL</option>
                 </select>
                 <a href="#pricing" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px;" data-translate="nav_get_prime">Get Prime</a>
             </div>
@@ -1031,6 +1090,10 @@
             if (selector) {
                 selector.value = lang;
             }
+            const selectorMobile = document.getElementById('langSelectorMobile');
+            if (selectorMobile) {
+                selectorMobile.value = lang;
+            }
 
             // Sync Google Translate cookie for fallback/other pages
             if (lang === 'en') {
@@ -1079,6 +1142,10 @@
             const selector = document.getElementById('langSelector');
             if (selector) {
                 selector.value = preferredLang;
+            }
+            const selectorMobile = document.getElementById('langSelectorMobile');
+            if (selectorMobile) {
+                selectorMobile.value = preferredLang;
             }
         }
 
