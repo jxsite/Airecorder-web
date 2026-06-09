@@ -225,6 +225,16 @@
             // Respect explicitly chosen language in localStorage and skip auto-detect
             const userLangPref = localStorage.getItem('user_language');
             if (userLangPref) {
+                if (userLangPref === 'en') {
+                    // English is native page language, delete translate cookie to disable translation
+                    const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
+                    if (cookieValue) {
+                        document.cookie = "googtrans=; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+                        document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+                        window.location.reload();
+                    }
+                    return;
+                }
                 const cookieValue = document.cookie.split('; ').find(row => row.trim().startsWith('googtrans='));
                 const currentLang = cookieValue ? cookieValue.split('=')[1].split('/').pop() : null;
                 if (currentLang !== userLangPref) {
@@ -301,6 +311,12 @@
 
         function changeLanguage(lang) {
             localStorage.setItem('user_language', lang);
+            if (lang === 'en') {
+                document.cookie = "googtrans=; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+                document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+                window.location.reload();
+                return;
+            }
             const targetTrans = '/en/' + lang;
             document.cookie = "googtrans=" + targetTrans + "; path=/; domain=." + window.location.hostname.replace(/^www\./, '') + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
             document.cookie = "googtrans=" + targetTrans + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 UTC";
